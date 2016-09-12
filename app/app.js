@@ -9,7 +9,7 @@ app.config(function($routeProvider) {
   }).
   when("/flowers",{
     templateUrl: "partials/flowers.html",
-    controller: ""
+    controller: "FlowerView"
   }).
   otherwise("/")
 })

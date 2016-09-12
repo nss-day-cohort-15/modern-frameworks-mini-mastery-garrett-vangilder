@@ -4,10 +4,23 @@
         <meta charset="utf-8">
         <title>NG QUIZ</title>
     </head>
+    <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
     <body ng-app="FlowerApp">
-        <a ng-href="/#/"><button>Home</button></a>
-        <a ng-href="/#/flowers"><button>Do you like flowers?</button></a>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        Willkommen Blumenliebhaber
+                    </a>
+                </div>
+                <a ng-href="/#/flowers" <button type="button"class="btn btn-default navbar-btn">Flowers</button></a>
+            </div>
+
+        </nav>
         <div ng-view></div>
+
         <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
         <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>

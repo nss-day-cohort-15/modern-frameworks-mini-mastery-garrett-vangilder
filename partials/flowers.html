@@ -1,6 +1,11 @@
-<div ng-repeat="flower in flowerArray">
-    <h3>{{flower.title}}</h3>
-    <h3>{{flower.price}}</h3>
-    <h3>{{flower.category}}</h3>
-    <h3>{{flower.description}}</h3>
+<div class="container">
+  <div class="row">
+
+<div class="card col-md-3" ng-repeat="flower in flowerArray">
+    <h2>{{flower.title}}</h2>
+    <h3>${{flower.price}}</h3>
+    <h4>Category:{{flower.category}}</h4>
+    <h5>Description: {{flower.description}}</h5>
+  </div>
+</div>
 </div>

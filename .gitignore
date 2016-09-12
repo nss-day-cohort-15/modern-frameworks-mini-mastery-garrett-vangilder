@@ -2,3 +2,5 @@ flowers.json
 lib/bower_components
 lib/node_modules
 app/values/fb-creds.js
+css/
+lib/.sass-cache

@@ -1,11 +1,40 @@
 <div class="container">
-  <div class="row">
+    <div class="row">
 
-<div class="card col-md-3" ng-repeat="flower in flowerArray">
+        <h4>Holiday Arrangements</h4>
+        <div ng-repeat="flower in flowerArray" ng-if="flower.category == 'holiday'">
+            <h2>{{flower.title}}</h2>
+            <h3>${{flower.price}}</h3>
+            <h5>Description:
+                {{flower.description}}</h5>
+        </div>
+
+        <h4>Bereavement Arrangements</h4>
+        <div ng-repeat="flower in flowerArray" ng-if="flower.category == 'bereavement'">
+            <h2>{{flower.title}}</h2>
+            <h3>${{flower.price}}</h3>
+            <h5>Description:
+                {{flower.description}}</h5>
+        </div>
+
+        <h4>Misc. Arrangements</h4>
+        <div ng-repeat="flower in flowerArray" ng-if="flower.category == 'misc'">
+            <h2>{{flower.title}}</h2>
+            <h3>${{flower.price}}</h3>
+            <h5>Description:
+                {{flower.description}}</h5>
+        </div>
+    </div>
+</div>
+
+<!-- <h4>Misc. Arrangements</h4>
+  <div class="card col-md-3"ng-repeat="flower in flowerArray" >
+  <div ng-if="flower.category == 'misc'">
     <h2>{{flower.title}}</h2>
     <h3>${{flower.price}}</h3>
     <h4>Category:{{flower.category}}</h4>
     <h5>Description: {{flower.description}}</h5>
   </div>
+
 </div>
-</div>
+</div> -->

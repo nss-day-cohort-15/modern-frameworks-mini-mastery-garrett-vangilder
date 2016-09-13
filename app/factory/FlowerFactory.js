@@ -6,7 +6,9 @@ app.factory("FlowerFactory", function($q, $http) {
         return $q((resolve, reject) => {
             $http.get("https://flower-power-angular.firebaseio.com/arrangements.json")
                 .success((data) => {
+                  console.log(data);
                   flowerArray = data;
+                  // flowerArray = convertResultsToArray(data.price);
                     resolve(flowerArray);
                 })
                 .error( (error) => {
@@ -14,5 +16,15 @@ app.factory("FlowerFactory", function($q, $http) {
                 });
         });
     };
+    let convertResultsToArray = (object) => {
+      let resultsArray =[];
+      let keysArray = Object.keys(object);
+      keysArray.forEach( (key) => {
+        object[key] = key;
+        resultsArray.push(object[key]);
+      });
+      return resultsArray;
+    };
+
     return {getFlowers};
 });
